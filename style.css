@@ -1,0 +1,322 @@
+body {
+  font-family: "Noto Sans Japanese", "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif;
+}
+
+h1 {
+    border-left: 15px solid #3454b4;
+    padding-left: 10px;
+    border-bottom: 3px solid #2f51b4;
+    font-weight: 800;
+  }
+  
+h2 {
+    border-left: 10px solid #3454b4;
+    padding-left: 15px;
+    font-weight: 800;
+  }
+
+h3 {
+    border-left: 5px solid #3454b4;
+    padding-left: 20px;
+    font-weight: 800;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;    
+  }
+
+h4 {
+    border-left: 3px solid #3454b4;
+    padding-left: 25px;
+    font-size: 1em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;    
+  }
+
+h5 {
+    border-left: 2px solid #d0d0d0;
+    padding-left: 10px;
+    font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;    
+  }
+
+h6 {
+    padding-left: 10px;
+    font-size: 1em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+
+ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 1em;
+}
+
+ul li {
+    font-family: "游明朝", sans-serif;;
+  }
+
+ol li {
+    font-family: "游明朝", sans-serif;;
+  }
+
+img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+table tr {
+    border: 0.5px solid black;
+    background-color: transparent;
+  }
+
+p {
+  text-indent: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: "游明朝", sans-serif;;
+}
+
+p.gothic {
+  text-indent: 1em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: "游ゴシック", sans-serif;;
+}
+
+.figcaption {
+  font-size: 0.8em;
+  font-weight: 800;
+  font-family: "游ゴシック", sans-serif;;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ページ区切り用のクラス定義 */
+.page-break {
+  display: none; /* 通常のWebブラウザでは非表示 */
+}
+
+.page-break-before {
+  display: none; /* 通常のWebブラウザでは非表示 */
+}
+
+.page-break-after {
+  display: none; /* 通常のWebブラウザでは非表示 */
+}
+
+.no-page-break {
+  display: block; /* 通常のWebブラウザでは表示 */
+}
+
+/* セクション区切り用のクラス */
+.section-break {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* 表のレイアウト */
+/* 背景色：白 */
+/* 罫線：黒 */
+/* 罫線の太さ：1px */
+/* 罫線の種類：実線 */
+table {
+  background-color: transparent;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table tr {
+  border: 1px solid black;
+  border-right: 1px solid black;
+  background-color: transparent;
+}
+
+table tr th {
+  border: 1px solid black;
+  border-right: 1px solid black;
+  background-color: transparent;
+  text-align: center !important; 
+}
+
+table tr td {
+  border: 1px solid black;
+  border-right: 1px solid black;
+  background-color: transparent;
+}
+
+/* PDF生成用の追加スタイル */
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+  
+  /* 見出しレベルに応じた改ページ制御 */
+  h1 {
+    page-break-before: always;
+    page-break-after: avoid;
+    margin-top: 0;
+  }
+  
+  h1:first-child {
+    page-break-before: auto; /* 最初のh1は改ページしない */
+  }
+  
+  h2 {
+    page-break-before: auto;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* 大きなセクション（h2）の前に改ページを入れたい場合 */
+  h2.new-page {
+    page-break-before: always;
+  }
+  
+  h3 {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;    
+  }
+
+  h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  h6 {
+    padding-left: 10px;
+    font-size: 1em;
+    margin-block-start: 0.5em !important;
+    margin-block-end: 0.5em !important;
+  }  
+  
+  /* テーブルと画像の改ページ制御 */
+  table {
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+  
+  ul {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 1em;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  /* リストの改ページ制御 */
+  ul, ol {
+    page-break-inside: avoid;
+    margin-block-start: 0;
+    margin-block-end: 0;    
+  }
+  
+  li {
+    page-break-inside: avoid;
+  }
+  
+  /* ページ区切り用クラスの有効化 */
+  .page-break,
+  .page-break-before {
+    display: block;
+    page-break-before: always;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .page-break-after {
+    display: block;
+    page-break-after: always;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  .no-page-break {
+    page-break-inside: avoid;
+  }
+  
+  /* セクション区切りの強化 */
+  .section-break {
+    page-break-before: always;
+    margin-top: 0;
+  }
+  
+  /* 孤立行・寡婦行の制御 */
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* 特定の要素を同一ページに保持 */
+  .keep-together {
+    page-break-inside: avoid;
+  }
+  
+  /* コードブロックの改ページ制御 */
+  pre, code {
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+  }
+
+  /* 表のレイアウト */
+  /* 背景色：白 */
+  /* 罫線：黒 */
+  /* 罫線の太さ：1px */
+  /* 罫線の種類：実線 */
+  table {
+    background-color: transparent;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table tr {
+    border: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+  }
+
+  table tr th {
+    border: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+    text-align: center !important; 
+  }
+
+  table tr td {
+    border: 1px solid black;
+    border-right: 1px solid black;
+    background-color: transparent;
+  }
+}
+
+/* 印刷プレビュー時のスタイル調整 */
+@page {
+  size: A4;
+}
