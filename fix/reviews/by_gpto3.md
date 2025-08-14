@@ -12,7 +12,7 @@
   - 再現性の技術的担保（Terraform state/Backend、モデル・プロンプトのバージョン管理、乱数・温度など）の明文化が不足。
   - 3章のツールチェーンに「Terraform State Backend／Workspace戦略／State Locking」が未明記。
   - 7章に「7.1 効果が高いケースと前提条件」が欠落。
-  - 用語・表記の統一（例: 「Claude Sonnet 3.7」↔「Claude 3.7」）と誤記の修正（「角煮ｎ」→「確認」）。
+  - 用語・表記の統一（例: 「Claude 3.7 Sonnet」↔「Claude 3.7」）と誤記の修正（「角煮ｎ」→「確認」）。
 
 ---
 
@@ -171,3 +171,16 @@
 以上。
 
 
+
+---
+
+## 付録A. 校正（適用済み）
+- 用語統一: 「データ漏洩」→「データ漏えい」（`report/03_生成AI、ツールの選定.md`）
+- モデル表記: 「Claude 3.7 Sonnet」→「Claude 3.7（Sonnet）」（`report/01_サマリー.md`）
+- モデル名修正: 「Claude Opus 4.1」→「Claude 4.1 Opus」（`report/03_生成AI、ツールの選定.md`）
+- 誤記修正:
+  - 「Terraformのの」→「Terraformの」（`report/05_実施結果①.md`）
+  - 「生成AIをに」→「生成AIに」（`report/05_実施結果①.md`）
+  - 「Terrraform」→「Terraform」（`report/07_実施結果③.md`）
+  - 冗語修正: 「使用を活用」→「活用」（`report/03_生成AI、ツールの選定.md`）
+  - 文の接続修正: 「次の生成AIモデル。開発ツール…」→「次の生成AIモデル、開発ツール…」（`report/03_生成AI、ツールの選定.md`）
