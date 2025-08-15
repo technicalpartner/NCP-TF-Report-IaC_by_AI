@@ -156,6 +156,11 @@ table tr td {
   background-color: transparent;
 }
 
+pre, pre > code {
+  white-space: pre-wrap !important;
+  word-break: break-all;
+}
+
 /* PDF生成用の追加スタイル */
 @media print {
   body {
@@ -285,6 +290,12 @@ table tr td {
     white-space: pre-wrap;
   }
 
+  pre, pre > code {
+    white-space: pre-wrap !important;
+    word-break: break-all;
+  }
+
+  
   /* 表のレイアウト */
   /* 背景色：白 */
   /* 罫線：黒 */
