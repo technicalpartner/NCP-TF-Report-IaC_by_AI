@@ -1,0 +1,5 @@
+# Prettier friendly markdownlint config (all formatting rules disabled)
+extends: markdownlint/style/prettier
+
+# Disable trailing whitespace rule
+MD009: false
