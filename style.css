@@ -2,6 +2,11 @@ body {
   font-family: "Noto Sans Japanese", "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", sans-serif;
 }
 
+b, strong {
+  font-weight: 800;
+  font-family: "Yu Gothic", "Meiryo", sans-serif;
+}
+
 h1 {
     border-left: 15px solid #3454b4;
     padding-left: 10px;
@@ -61,11 +66,9 @@ ol li {
   }
 
 img {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: block;
-    border: 1px solid black;
-    border-radius: 3px;
     text-align: center;
   }
 
@@ -156,11 +159,6 @@ table tr td {
   background-color: transparent;
 }
 
-pre, pre > code {
-  white-space: pre-wrap !important;
-  word-break: break-all;
-}
-
 /* PDF生成用の追加スタイル */
 @media print {
   body {
@@ -168,6 +166,11 @@ pre, pre > code {
     line-height: 1.6;
   }
   
+  b, strong {
+    font-weight: 800;
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+  }
+
   /* 見出しレベルに応じた改ページ制御 */
   h1 {
     page-break-before: always;
@@ -290,12 +293,6 @@ pre, pre > code {
     white-space: pre-wrap;
   }
 
-  pre, pre > code {
-    white-space: pre-wrap !important;
-    word-break: break-all;
-  }
-
-  
   /* 表のレイアウト */
   /* 背景色：白 */
   /* 罫線：黒 */
